@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Home extends MY_Controller {
 	function __construct()
 	{
@@ -12,8 +11,8 @@ class Home extends MY_Controller {
 		$input = array();
 		$input['where'] = array('status'=>'0');
 		$total_order = $this->transaction_model->get_total($input);
+		// $chart = 
 		$this->data['total_order']=$total_order;
-
 		$this->data['temp']='admin/home/index';
 		$this->load->view('admin/main',$this->data);
 	}

@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="<?php echo public_url('admin/'); ?>js/jquery-1.11.1.min.js"></script>
 	<script src="<?php echo public_url('admin/'); ?>js/bootstrap.min.js"></script>
 	<script src="<?php echo public_url('admin/'); ?>js/chart.min.js"></script>
@@ -30,3 +31,27 @@
 		});
 	
 	</script>
+	
+<script>
+	console.log(document.getElementById("bar-chart"));
+	new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [2478,5267,734,784,433]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+</script>

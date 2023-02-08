@@ -208,7 +208,7 @@ class MY_Model extends CI_Model {
         //echo $this->db->last_query();
         return $query->result();
     }
-    
+
     /**
      * Gan cac thuoc tinh trong input khi lay danh sach
      * $input : mang du lieu dau vao
